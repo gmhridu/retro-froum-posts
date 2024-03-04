@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font Mulish & Inter from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Retro</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <style>
+      .font-mulish {
+        font-family: "Mulish", sans-serif;
+      }
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+
+      .tooltip::before {
+        content: attr(data-tip);
+        background-color: #12132d;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip-open::before {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- navbar section -->
+      <section class="container mx-auto my-4">
+        <div class="navbar">
+          <div class="flex-1">
+            <a
+              class="btn btn-ghost font-mulish text-4xl font-black text-[#12132D]"
+              >ReTro</a
+            >
+          </div>
+          <div class="flex gap-4">
+            <div class="xs:hidden hover-container md:flex gap-5">
+              <div
+                class="tooltip hover:tooltip-open hover:tooltip-bottom"
+                data-tip="Home"
+              >
+                <button>
+                  <img
+                    class="border-2 rounded-full p-2 bg-[#12132D08] border-[#0307121A]"
+                    src="./images/home-frame.png"
+                    alt=""
+                  />
+                </button>
+              </div>
+
+              <div
+                class="tooltip hover:tooltip-open hover:tooltip-bottom"
+                data-tip="Edit"
+              >
+                <button>
+                  <img
+                    class="border-2 rounded-full p-2 bg-[#12132D08] border-[#0307121A]"
+                    src="./images/write-frame.png"
+                    alt=""
+                  />
+                </button>
+              </div>
+
+               <div
+                class="tooltip hover:tooltip-open hover:tooltip-bottom"
+                data-tip="Add"
+              >
+                <button>
+                  <img
+                    class="border-2 rounded-full p-2 bg-[#12132D08] border-[#0307121A]"
+                    src="./images/add-people.png"
+                    alt=""
+                  />
+                </button>
+              </div>
+
+               <div
+                class="tooltip hover:tooltip-open hover:tooltip-bottom"
+                data-tip="Flag"
+              >
+                <button>
+                  <img
+                    class="border-2 rounded-full p-2 bg-[#12132D08] border-[#0307121A]"
+                    src="./images/flage-frame.png"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+            <div>
+              <button
+                class="btn btn-primary bg-[#797DFC] hover:bg-[#8c8db9] border-none text-white font-mulish text-xl font-bold rounded-full px-8"
+              >
+                Sign In
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- hero section -->
+      <section class="container mx-auto">
+        <div
+          class="bg-cover bg-center bg-[#12132D] p-10 rounded-[2rem]"
+          style="background-image: url('./images/bgbanner.png')"
+        >
+          <div
+            class="hero flex flex-col xs:space-y-6 md:flex-row md:gap-5 md:justify-evenly md:items-center"
+          >
+            <div class="text-left flex flex-col gap-5">
+              <div>
+                <h1
+                  class="font-mulish text-[2.2rem] md:text-[4rem] font-black text-white"
+                >
+                  Welcome to the
+                  <br />
+                  <span class="text-[#797DFC]">ReTro</span> Forum
+                </h1>
+                <p
+                  class="font-mulish text-base md:text-xl font-medium text-[#FFFFFFCC]"
+                >
+                  Share your favorite opinion and win and wp
+                  <br />
+                  forum coffee mug!
+                </p>
+              </div>
+
+              <div class="flex relative">
+                <input
+                  id="category-input"
+                  class="p-4 rounded-full w-full md:w-4/5"
+                  type="text"
+                  placeholder="Search here anything"
+                />
+                <button
+                  id="category-search-btn"
+                  class="btn btn-primary bg-[#797DFC] hover:bg-[#8c8db9] border-none text-white font-mulish text-xl font-bold rounded-full px-6 absolute right-[4px] md:right-[105px] top-1"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 md:p-14 flex flex-col gap-5 rounded-[2rem]"
+            >
+              <div class="flex justify-between gap-10">
+                <p
+                  class="font-mulish text-2xl font-medium text-[#12132DCC] text-nowrap"
+                >
+                  Registered Users
+                </p>
+                <p class="font-mulish text-2xl font-medium text-[#12132DCC]">
+                  01
+                </p>
+              </div>
+              <div class="flex justify-between gap-10">
+                <p class="font-mulish text-2xl font-medium text-[#12132DCC]">
+                  Forum
+                </p>
+                <p class="font-mulish text-2xl font-medium text-[#12132DCC]">
+                  05
+                </p>
+              </div>
+              <div class="flex justify-between gap-10">
+                <p class="font-mulish text-2xl font-medium text-[#12132DCC]">
+                  Topics
+                </p>
+                <p class="font-mulish text-2xl font-medium text-[#12132DCC]">
+                  01
+                </p>
+              </div>
+              <div class="flex justify-between gap-10">
+                <p class="font-mulish text-2xl font-medium text-[#12132DCC]">
+                  Replies
+                </p>
+                <p class="font-mulish text-2xl font-medium text-[#12132DCC]">
+                  01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- let's discuss section -->
+
+      <section class="container mx-auto">
+        <div class="flex flex-col items-center justify-center my-3 mt-16">
+          <h2 class="font-mulish text-4xl font-black text-[#12132D] mb-4">
+            Let’s Discuss
+          </h2>
+          <p
+            class="font-inter text-xl font-normal text-center text-[#12132D99] mb-10"
+          >
+            Yes, you can run unit tests and view the results directly within the
+            app. The
+            <br />
+            integrated testing features allow for a streamlined .
+          </p>
+        </div>
+
+        
+        
+          <!-- loading spinner -->
+          <div id="load-spinner" class="hidden min-h-screen items-center text-center flex justify-center">
+          <span class="loading loading-bars loading-lg"></span>
+        </div>
+        <!-- Authors -->
+        <div
+          class="flex flex-col md:flex-row gap-4 md:gap-8 my-8"
+        >
+          <div id="all-post" class="flex flex-col gap-5 flex-[.75]"></div>
+          
+          <!-- Title -->
+          <div class="bg-[#12132D0D] p-10 flex-[.25] rounded-3xl">
+            <div class="flex justify-between items-center mb-3">
+              <div>
+                <h5 class="font-mulish md:text-xl font-bold text-[#12132D]">
+                  Title
+                </h5>
+              </div>
+              <div class="flex md:gap-3">
+                <img src="./images/markas.png" alt="" />
+                <p class="font-inter text-xl font-normal text-[#12132D99]">
+                  Mark as read <span id="clicked-count">0</span>
+                </p>
+              </div>
+            </div>
+
+            <div id="get-read-data" class="flex flex-col gap-5"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join forum section -->
+      <section class="container mx-auto my-3">
+        <div
+          class="flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-around bg-[#12132D] bg-cover bg-center rounded-[2rem] p-6"
+        >
+          <div class="flex flex-col gap-5">
+            <div class="flex flex-col gap-6">
+              <h2
+                class="font-mulish text-4xl font-black text-white text-center md:text-left"
+              >
+                Join Our Forum
+              </h2>
+              <p
+                class="font-mulish text-base text-[#FFFFFFCC] font-medium text-center md:text-left"
+              >
+                Share your favorite opinion and win and wp forum coffee mug!
+                Yes, you can
+                <br />
+                run unit tests and view the results directly within the app.
+              </p>
+            </div>
+            <div class="flex justify-center md:justify-start">
+              <button
+                class="btn btn-primary bg-[#797DFC] hover:bg-[#8c8db9] border-none text-white font-mulish text-xl font-bold rounded-full px-8"
+              >
+                Registered Now
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <img src="./images/joinforum.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest post section -->
+      <section class="container mx-auto">
+        <div class="flex flex-col items-center justify-center my-3 mt-16">
+          <h2 class="font-mulish text-4xl font-black text-[#12132D] mb-4">
+            Latest Posts
+          </h2>
+          <p
+            class="font-inter text-xl font-normal text-center text-[#12132D99] mb-10"
+          >
+            Yes, you can run unit tests and view the results directly within the
+            app. The
+            <br />
+            integrated testing features allow for a streamlined .
+          </p>
+        </div>
+        <!-- card section -->
+        <section>
+          <div
+            id="latest-post-load"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-3 md:my-7 hover:cursor-pointer"
+          >
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- footer section  -->
+
+    <section class="bg-[#12132D0D] mt-14 md:mt-28">
+      <footer
+        class="container mx-auto footer footer-center p-10 md:p-16 bg-base-200 text-base-content rounded"
+      >
+        <nav
+          class="flex flex-col items-center justify-center gap-4 border-b-2 pb-5"
+        >
+          <h2 class="font-mulish text-4xl font-black text-[#12132D]">ReTro</h2>
+          <p
+            class="font-mulish text-xs md:text-base font-normal text-[#12132DB2] text-center"
+          >
+            Our journey in crafting meaningful content transcends mere
+            randomness. Drawing inspiration from the rich tapestry of classical
+            literature, we delve into the<br />
+
+            timeless wisdom that enriches our understanding. Rooted in the
+            essence of human expression, our quest is to redefine narratives and
+            ignite curiosity.
+            <br />
+            Join us as we embark on a voyage through words, shaping the
+            narrative of tomorrow.
+          </p>
+          <nav>
+            <div class="grid grid-flow-col gap-4 hover:cursor-pointer">
+              <img src="./images/social.png" alt="" />
+            </div>
+          </nav>
+        </nav>
+
+        <aside>
+          <p class="font-mulish text-base font-light text-[#12132D80]">
+            Copyright © 2017, All Rights Reserved.
+          </p>
+        </aside>
+      </footer>
+    </section>
+
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
