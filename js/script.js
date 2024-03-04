@@ -61,13 +61,13 @@ const renderPosts = (posts) => {
         <div class="flex justify-around md:gap-5 md:justify-between mt-3">
           <div class="flex gap-2 lg:gap-5">
             <div class="flex md:gap-2 lg:gap-4">
-              <img class="w-[1.75rem] h-[1.75rem]" src="./image/messages.png" alt=""/>
+              <img class="w-[1.75rem] h-[1.75rem]" src="./image/message-icone.svg" alt=""/>
               <p class="font-inter text-base font-normal text-[#12132D99]">${
                 item.comment_count
               }</p>
             </div>
             <div class="flex gap-2 lg:gap-4">
-            <a href="https://imgbb.com/"><img class="w-[1.75rem] h-[1.75rem]" src="https://i.ibb.co/b2jsGj3/eye.png" alt="eye" border="0"></a>
+            <img class="w-[1.75rem] h-[1.75rem]" src="https://i.ibb.co/b2jsGj3/eye.png" alt="eye" border="0">
               <p id="get-view-count" class="font-inter text-base font-normal text-[#12132D99]">${
                 item.view_count
               }</p>
