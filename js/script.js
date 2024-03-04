@@ -60,19 +60,19 @@ const renderPosts = (posts) => {
         <div class="flex justify-around md:gap-5 md:justify-between mt-3">
           <div class="flex gap-2 lg:gap-5">
             <div class="flex items-center justify-center gap-2 lg:gap-4">
-              <i class="fa-regular fa-comment fa-lg"></i>
+              <i class="fa-regular fa-comment fa-lg text-[#12132D99]"></i>
               <p class="font-inter text-base font-normal text-[#12132D99]">${
                 item.comment_count
               }</p>
             </div>
             <div class="flex items-center justify-center gap-2 lg:gap-4">
-              <i class="fa-solid fa-eye fa-flip-horizontal fa-lg"></i>
+              <i class="fa-solid fa-eye fa-flip-horizontal fa-lg text-[#12132D99]"></i>
               <p id="get-view-count" class="font-inter text-base font-normal text-[#12132D99]">${
                 item.view_count
               }</p>
             </div>
             <div class="flex items-center justify-center gap-2 lg:gap-4">
-              <i class="fa-regular fa-clock fa-lg"></i>
+              <i class="fa-regular fa-clock fa-lg text-[#12132D99]"></i>
               <p class="font-inter text-base font-normal text-[#12132D99] text-nowrap"><span>${
                 item.posted_time
               }</span> min</p>
@@ -80,7 +80,7 @@ const renderPosts = (posts) => {
           </div>
           <div class="flex items-center justify-center mt-2">
             <button id="${buttonId}" class="read-btn">
-              <i class="fa-solid fa-message fa-lg hover:cursor-pointer"></i>
+              <i class="fa-solid fa-message fa-lg text-[#10B981] hover:cursor-pointer"></i>
             </button>
           </div>
         </div>
@@ -99,7 +99,7 @@ const renderPosts = (posts) => {
         <div class="bg-white shadow p-7 lg:p-7 flex justify-around items-center md:gap-2 rounded-2xl">
           <h4 id="get-clicked-title" class="font-mulish text-base font-semibold text-[#12132D]">${title}</h4>
           <div class="flex items-center justify-center gap-1">
-            <i class="fa-solid fa-eye fa-flip-horizontal fa-lg"></i>
+            <i class="fa-solid fa-eye fa-flip-horizontal fa-lg text-[#12132D99]"></i>
             <p class="font-inter text-base font-normal text-[#12132D99]">${viewCount}</p>
           </div>
         </div>
@@ -162,7 +162,7 @@ const latestPostSection = async () => {
               <figure class="px-4 pt-4">
                 <img class="w-11/12 h-[11.875rem] rounded-3xl"
                   src="${item.cover_image}"
-                  alt="Shoes"
+                  alt="cover"
                   class="rounded-xl"
                 />
               </figure>
@@ -183,7 +183,7 @@ const latestPostSection = async () => {
                 >
                   ${item.title}
                 </h2>
-                <p class="font-mulish text-base font-normal text-[#12132D99]">
+                <p class="font-mulish line-clamp-2 text-base font-normal text-[#12132D99]">
                   ${item.description}
                 </p>
                 <div class="card-actions flex gap-3">
