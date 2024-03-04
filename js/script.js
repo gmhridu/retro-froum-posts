@@ -67,13 +67,13 @@ const renderPosts = (posts) => {
               }</p>
             </div>
             <div class="flex gap-2 lg:gap-4">
-              <img class="w-[1.75rem] h-[1.75rem]" src="./image/eye.png" alt=""/>
+            <a href="https://imgbb.com/"><img class="w-[1.75rem] h-[1.75rem]" src="https://i.ibb.co/b2jsGj3/eye.png" alt="eye" border="0"></a>
               <p id="get-view-count" class="font-inter text-base font-normal text-[#12132D99]">${
                 item.view_count
               }</p>
             </div>
             <div class="flex gap-2 lg:gap-4">
-              <img class="w-[1.75rem] h-[1.75rem]" src=${'./image/timeer.png'} alt=""/>
+              <img class="w-[1.75rem] h-[1.75rem]" src=${"./image/timeer.png"} alt=""/>
               <p class="font-inter text-base font-normal text-[#12132D99] text-nowrap"><span>${
                 item.posted_time
               }</span> min</p>
