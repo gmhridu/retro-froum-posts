@@ -79,7 +79,7 @@ const renderPosts = (posts) => {
               }</span> min</p>
             </div>
           </div>
-          <div class="flex items-center justify-center">
+          <div class="flex items-center justify-center mt-2">
             <button id="${buttonId}" class="read-btn">
               <i class="fa-solid fa-message fa-lg hover:cursor-pointer"></i>
             </button>
