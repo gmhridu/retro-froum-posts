@@ -9,7 +9,7 @@ const latestPost = document.getElementById("latest-post-load");
 let postData;
 
 const allPostsData = async () => {
-  document.getElementById('load-spinner').classList.remove('hidden');
+  document.getElementById("load-spinner").classList.remove("hidden");
   setTimeout(async () => {
     const response = await fetch(
       "https://openapi.programming-hero.com/api/retro-forum/posts"
@@ -17,9 +17,8 @@ const allPostsData = async () => {
     postData = await response.json();
     renderPosts(postData.posts);
 
-    document.getElementById('load-spinner').classList.add('hidden');
-  },2000);
-
+    document.getElementById("load-spinner").classList.add("hidden");
+  }, 2000);
 };
 
 const renderPosts = (posts) => {
@@ -60,7 +59,7 @@ const renderPosts = (posts) => {
         </div>
         <div class="flex justify-around md:gap-5 md:justify-between mt-3">
           <div class="flex gap-2 lg:gap-5">
-            <div class="flex items-center justify-center md:gap-2 lg:gap-4">
+            <div class="flex items-center justify-center gap-2 lg:gap-4">
               <i class="fa-regular fa-comment fa-lg"></i>
               <p class="font-inter text-base font-normal text-[#12132D99]">${
                 item.comment_count
@@ -112,8 +111,7 @@ const renderPosts = (posts) => {
       if (isActivity.innerText === "false") {
         isActivity.classList.remove("bg-[#10B981]");
         isActivity.classList.add("bg-[#FF3434]");
-      }
-      else {
+      } else {
         isActivity.classList.remove("bg-[#FF3434]");
         isActivity.classList.add("bg-[#10B981]");
       }
@@ -141,7 +139,6 @@ const searchData = async (category) => {
     document.getElementById("load-spinner").classList.add("hidden");
   }, 2000);
 };
-
 
 categorySearchBtn.addEventListener("click", () => {
   if (!postData) {
@@ -202,7 +199,11 @@ const latestPostSection = async () => {
                     <p
                       class="font-mulish text-[0.875rem] font-normal text-[#12132D99]"
                     >
-                      ${item?.author?.designation? item.author.designation : "Unknown"}
+                      ${
+                        item?.author?.designation
+                          ? item.author.designation
+                          : "Unknown"
+                      }
                     </p>
                   </div>
                 </div>
@@ -212,7 +213,7 @@ const latestPostSection = async () => {
 
     latestPost.appendChild(latestPostsContainer);
   });
-}
+};
 
 latestPostSection();
 allPostsData();
