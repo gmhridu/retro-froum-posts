@@ -60,28 +60,28 @@ const renderPosts = (posts) => {
         </div>
         <div class="flex justify-around md:gap-5 md:justify-between mt-3">
           <div class="flex gap-2 lg:gap-5">
-            <div class="flex md:gap-2 lg:gap-4">
-              <i class="fa-regular fa-message"></i>
+            <div class="flex items-center justify-center md:gap-2 lg:gap-4">
+              <i class="fa-regular fa-comment fa-lg"></i>
               <p class="font-inter text-base font-normal text-[#12132D99]">${
                 item.comment_count
               }</p>
             </div>
-            <div class="flex gap-2 lg:gap-4">
-              <img class="w-[1.75rem] h-[1.75rem]" src="./image/eye.png" alt=""/>
+            <div class="flex items-center justify-center gap-2 lg:gap-4">
+              <i class="fa-solid fa-eye fa-flip-horizontal fa-lg"></i>
               <p id="get-view-count" class="font-inter text-base font-normal text-[#12132D99]">${
                 item.view_count
               }</p>
             </div>
-            <div class="flex gap-2 lg:gap-4">
-              <img class="w-[1.75rem] h-[1.75rem]" src="./image/timeer.png" alt=""/>
+            <div class="flex items-center justify-center gap-2 lg:gap-4">
+              <i class="fa-regular fa-clock fa-lg"></i>
               <p class="font-inter text-base font-normal text-[#12132D99] text-nowrap"><span>${
                 item.posted_time
               }</span> min</p>
             </div>
           </div>
-          <div>
+          <div class="flex items-center justify-center">
             <button id="${buttonId}" class="read-btn">
-              <img class="w-[1.75rem] h-[1.75rem] hover:cursor-pointer" src="./image/mail.png" alt=""/>
+              <i class="fa-solid fa-message fa-lg hover:cursor-pointer"></i>
             </button>
           </div>
         </div>
@@ -99,8 +99,8 @@ const renderPosts = (posts) => {
       div.innerHTML = `
         <div class="bg-white shadow p-7 lg:p-7 flex justify-around items-center md:gap-2 rounded-2xl">
           <h4 id="get-clicked-title" class="font-mulish text-base font-semibold text-[#12132D]">${title}</h4>
-          <div class="flex gap-1">
-            <img class="w-[1.75rem] h-[1.75rem]" src="./image/eye.png" alt=""/>
+          <div class="flex items-center justify-center gap-1">
+            <i class="fa-solid fa-eye fa-flip-horizontal fa-lg"></i>
             <p class="font-inter text-base font-normal text-[#12132D99]">${viewCount}</p>
           </div>
         </div>
