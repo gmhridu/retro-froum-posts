@@ -73,7 +73,7 @@ const renderPosts = (posts) => {
               }</p>
             </div>
             <div class="flex gap-2 lg:gap-4">
-              <img class="w-[1.75rem] h-[1.75rem]" src="./image/timeer.png" alt=""/>
+              <img class="w-[1.75rem] h-[1.75rem]" src=${'./image/timeer.png'} alt=""/>
               <p class="font-inter text-base font-normal text-[#12132D99] text-nowrap"><span>${
                 item.posted_time
               }</span> min</p>
