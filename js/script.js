@@ -81,7 +81,7 @@ const renderPosts = (posts) => {
           </div>
           <div>
             <button id="${buttonId}" class="read-btn">
-              <img class="w-[1.75rem] h-[1.75rem] hover:cursor-pointer" src="${"./image/mail.png"}" alt=""/>
+              <img class="w-[1.75rem] h-[1.75rem] hover:cursor-pointer" src=${"./image/mail.png"} alt=""/>
             </button>
           </div>
         </div>
